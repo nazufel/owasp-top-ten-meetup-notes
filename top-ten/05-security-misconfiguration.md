@@ -17,7 +17,7 @@ Security misconfigurations are commonly a result of insecure default configurati
 ### Reconnaissance
 The following vulnerability was discovered using nikto trying to figureprint the server. I noticed in the top of the output that `robots.txt` disallowed crawlers at the `/ftp` route. So, of course, I check that out.
 
-```
+```shell
 nikto -h http://localhost:3000
 - Nikto v2.5.0
 ---------------------------------------------------------------------------
@@ -32,9 +32,11 @@ nikto -h http://localhost:3000
 + No CGI Directories found (use '-C all' to force check all possible dirs)
 + /robots.txt: Entry '/ftp/' is returned a non-forbidden or redirect HTTP code (200). See: https://portswigger.net/kb/issues/00600600_robots-txt-file
 + /robots.txt: contains 1 entry which should be manually viewed. See: https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt
-```  
-Running `curl localhost:3000/ftp` returns this `<body>` of text.
+
 ```
+Running `curl localhost:3000/ftp` returns this `<body>` of text.
+
+```html
 <body class="directory">
     <input id="search" type="text" placeholder="Search" autocomplete="off" />
     <div id="wrapper">
@@ -52,9 +54,12 @@ Running `curl localhost:3000/ftp` returns this `<body>` of text.
     </div>
   </body>
 
-````
-It's a list of sensative files on a file server. No authentication needed. `acquisitions.md` looks interesting. Curling for that, `curl localhost:3000/ftp/aqcuisitions.md` returns:
 ```
+
+### Exploit
+It's a list of sensative files on a file server. No authentication needed. `acquisitions.md` looks interesting. Curling for that, `curl localhost:3000/ftp/aqcuisitions.md` returns:
+
+```md
 # Planned Acquisitions
 
 > This document is confidential! Do not distribute!
@@ -77,8 +82,6 @@ Our shareholders will be excited. It's true. No fake news.
 
 ``` 
 Found what looks to be a real and condiential document. The business impact of this information getting out would be substantial.
-
-### Exploit
 
 ### Impact
 
