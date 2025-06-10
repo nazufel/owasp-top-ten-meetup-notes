@@ -5,7 +5,7 @@
 
 Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user.
 
-### Reconnaissance
+## Reconnaissance
 I was interested in the shopping basket. The url in the browser for a logged in user didn't have a basket ID. I expected there to be a `/basket/1234` in the url so that the web server knew what basket to look up. However, the path was just `/basket`. 
 
 Running some requests through Burp, I saw that did infact know that the basket ID was. 
