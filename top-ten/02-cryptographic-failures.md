@@ -105,7 +105,7 @@ Started: Tue Jun 10 07:26:21 2025
 Stopped: Tue Jun 10 07:26:37 2025
 ```
 
-Hashcat was able to find the pasword in its wordlist of `admin123`. Let's try it on the site. 
+Hashcat was able to find the password in its wordlist of `admin123`. Let's try it on the site. 
 
 We're in!
 
