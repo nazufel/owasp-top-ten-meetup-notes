@@ -1,4 +1,4 @@
-# A2:201 - Cryptographic Failures
+# A2:2021 - Cryptographic Failures
 
 ## Overview
 [Cryptographic Failures](https://owasp.org/Top10/A02_2021-Cryptographic_Failures/) occur when applications fail to properly protect data in transit and at rest through inadequate or missing cryptographic controls. This vulnerability category encompasses issues such as using weak encryption algorithms, improper key management, transmitting sensitive data in plaintext, and failing to encrypt sensitive data altogether.

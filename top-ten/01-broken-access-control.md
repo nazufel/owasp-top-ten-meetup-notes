@@ -22,14 +22,14 @@ The `bid` ("basket ID?") is set to the same id as the api request.
 
 Note: the user does have to be logged in.
 
-### Exploit
+## Exploit
 Exploiting this vulnerability was a simple as changing `bid` in the session storage to another number and refresh the browser. 
 
 ![Basket ID in Burp Suite](images/a01-2021-new-bid.png)
 
 The refreshed page shows a basket with items from another user. 
 
-#### Classification
+### Classification
 This vulnerability can be classified as:
 
 **CWE-639: Authorization Bypass Through User-Controlled Key** - The application uses a user-controlled key (the `bid` value in session storage) to access restricted functionality without proper authorization checks.
@@ -43,7 +43,7 @@ This vulnerability can be classified as:
 **User Interaction**: None (once authenticated, exploitation is trivial)
 **Scope**: Affects multiple users' data beyond the attacker's own account
 
-### Impact
+## Impact
 The impact of this broken access control vulnerability in an e-commerce application is severe and multifaceted:
 
 **Data Privacy Breach**: Attackers can view other users' shopping baskets, revealing personal shopping preferences, purchase history, and potentially sensitive information about customers' needs or circumstances.
@@ -58,10 +58,10 @@ The impact of this broken access control vulnerability in an e-commerce applicat
 
 **Competitive Intelligence**: Competitors could potentially access customer shopping patterns and preferences, gaining unfair business intelligence about market demands and customer behavior.
 
-### Remediation
+## Remediation
 Here are the reccomended security measures for remmediation:
 
-#### Immediate Actions
+### Immediate Actions
 
 **1. Server-Side Authorization Checks**
 - Implement proper authorization validation on all basket-related API endpoints
@@ -78,7 +78,7 @@ Here are the reccomended security measures for remmediation:
 - Add user ID foreign key constraints to basket tables
 - Create database views that automatically filter results based on the authenticated user
 
-#### Long-Term Security Improvements
+### Long-Term Security Improvements
 
 **4. Implement Proper Access Control Framework**
 - Deploy a centralized authorization system (e.g., RBAC or ABAC)
@@ -99,3 +99,5 @@ Here are the reccomended security measures for remmediation:
 - Conduct thorough security code reviews focusing on authorization logic
 - Provide security training to development teams on secure coding practices
 - Establish secure development lifecycle (SDLC) processes
+
+## Conclusion
