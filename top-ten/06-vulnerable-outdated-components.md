@@ -14,3 +14,6 @@ The use of such components can expose applications to various attacks, as attack
 - Not securing the components' configurations (see A05:2021-Security Misconfiguration)
 - Using components from untrusted sources or that are not actively maintained
 - Failing to remove unused dependencies, unnecessary features, components, files, and documentation
+
+## Reconasissance
+The reconasissance for this vulnerability started in the previous entry. If you have not done [05 Security Misconfiguration](./05-security-misconfiguration.md) then go back and do that one first.
