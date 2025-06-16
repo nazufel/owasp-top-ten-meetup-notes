@@ -42,3 +42,15 @@ Progress: 10 / 11 (90.91%)
 Finished
 ===============================================================
 ```
+`gobuster` shows a hit on `/support/logs` directory. That can something interesting to check out.
+
+## Exploit
+Navigating to `/support/logs` shows a directory of log files. There's an `access.log` file.
+
+```txt
+
+```
+This shows what may be nginx logs with logs of our requests but also could contain requests of other users.
+
+## Impact
+I
