@@ -18,5 +18,27 @@ Security logging and monitoring failures can prevent organizations from detectin
 Enumerating possible endpoints and URL paths is part of a normal pentest. Running [gobuster](https://github.com/OJ/gobuster) with a custom wordlist showed an interesting directory to check out.
 
 ```sh
-
+gobuster dir -u http://localhost:3000 -w ./dirlist.txt --exclude-length 80117,80118,80119
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://localhost:3000
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                ./dirlist.txt
+[+] Negative Status codes:   404
+[+] Exclude Length:          80117,80118,80119
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/api                  (Status: 500) [Size: 3017]
+/assets               (Status: 301) [Size: 156] [--> /assets/]
+/support/logs         (Status: 200) [Size: 8890]
+Progress: 10 / 11 (90.91%)
+===============================================================
+Finished
+===============================================================
 ```
