@@ -4,12 +4,15 @@ Meetup Notes for the [OWASP Top Ten](https://owasp.org/www-project-top-ten/) dem
 
 ## 🚨 This is for educational purposes only and only used on systems with expressed permission
 
-## Methodology
-The methodology and testing scope for this site will be focused on some parts of the systme. This a an e-commerce site. While 
-
 ## Tools
 - [BurpSuite](https://portswigger.net/burp)
 - [Docker](https://www.docker.com/get-started/)
+- [gobuster](https://github.com/OJ/gobuster)
+- [hashcat](https://github.com/hashcat/hashcat)
+- [hash identifier](https://www.kali.org/tools/hash-identifier/)
 - [Kali Linux](https://www.kali.org/)
-- [nikto](https://github.com/sullo/nikto)
 - [Juice Shop](https://github.com/juice-shop/juice-shop)
+- [nikto](https://github.com/sullo/nikto)
+
+## Exploiting the Juiceshop
+Follow the walkthroughs in [top-ten](./top-ten/) to see demonstrations of each.
