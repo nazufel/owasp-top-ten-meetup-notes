@@ -48,7 +48,19 @@ Finished
 Navigating to `/support/logs` shows a directory of log files. There's an `access.log` file.
 
 ```txt
-
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:24 +0000] "GET /rest/products/1/reviews HTTP/1.1" 200 521 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:24 +0000] "GET /rest/products/1/reviews HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:24 +0000] "GET /rest/products/1/reviews HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:24 +0000] "GET /rest/products/1/reviews HTTP/1.1" 200 521 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:24 +0000] "GET /rest/products/1/reviews HTTP/1.1" 200 521 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:24 +0000] "POST /rest/products/reviews HTTP/1.1" 200 318 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:30 +0000] "GET /rest/user/whoami HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:30 +0000] "GET /rest/products/24/reviews HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:30 +0000] "GET /rest/products/24/reviews HTTP/1.1" 200 30 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:31 +0000] "GET /rest/user/whoami HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:31 +0000] "GET /rest/products/1/reviews HTTP/1.1" 200 553 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:31 +0000] "GET /rest/products/1/reviews HTTP/1.1" 200 553 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+::ffff:172.17.0.1 - - [16/Jun/2025:17:01:31 +0000] "GET /rest/products/1/reviews HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
 ```
 This shows what may be nginx logs with logs of our requests but also could contain requests of other users.
 
